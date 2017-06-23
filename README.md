@@ -1,5 +1,5 @@
 # dotnetcorewebapp - Getting started with ASP.NET Core on Docker linux and Kubernetes
-Here is a full example for running a ASP.NET Core web app based on the Kestrel web server on a Linux based Docker and Kubernetes. Use it to get started quickly with these exciting technologies.
+This is a full example of running a ASP.NET Core web app based on the Kestrel web server on a Linux based Docker and Kubernetes. Use it to get up to speed quickly with these exciting technologies.
 
 To run the app locally, install [the .NET Core SDK](https://www.microsoft.com/net/download/core) and execute
 ```

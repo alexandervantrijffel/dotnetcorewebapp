@@ -38,7 +38,7 @@ If you are using Minikube, the external ip is listed with the command
 ```
 minikube ip
 ```
-So with Minikube the dotnetcorewebapp is available at http://$(minikube ip):5555 and http://$(minikube ip):30555.
+Hence with Minikube the dotnetcorewebapp is available at http://$(minikube ip):5555 and http://$(minikube ip):30555.
 
 ## Installation of kubernetes
 
@@ -56,14 +56,14 @@ Run minikube using virtual box with the hyperv driver. Replace "New Virtual Swit
 minikube.exe start --vm-driver=hyperv --memory=1536 --hyperv-virtual-switch="New Virtual Switch" --v=7
 ```
 
-Test if networking is setup correctly with 
+Test whether networking is setup correctly with 
 ```
 minikube ssh
 ```
 
 A bash terminal inside the minikube VM should be opened. If not, check your [Hyper-V network settings](https://docs.docker.com/machine/drivers/hyper-v/#2-set-up-a-new-external-network-switch-optional).
 
-The Hyper-V VM can also be controlled by taking the following steps:
+The Minikube Hyper-V VM can also be controlled by taking the following steps:
 - Start 'Hyper-V Manager'
 - Double click the minikube VM
 - Login with user **docker** and password **tcuser**
@@ -75,3 +75,5 @@ kubectl cluster-info
 
 ## Next steps
 [Deploy a private Docker registry](https://github.com/alexandervantrijffel/kubernetes-tools#install-a-private-docker-registry) to your Kubernetes cluster. This allows for deploying new versions of the ASP.NET Core web app by pushing new Docker images to the registry and having the Kubernetes cluster pull the new versions.
+
+Setup distrubuted storage for persistance of data in the cluster. This can be achieved with [Heketi](http://blog.infracloud.io/gluster-heketi-kubernetes) which builds upon GlusterFS.
